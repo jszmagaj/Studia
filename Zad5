@@ -1,0 +1,26 @@
+public class Main {
+
+    public static void main(String[] args) {
+
+        int number = 0;
+        int steps = 0;
+        long a;
+        for(int i=2;i<1000000;i++){
+            int count = 1;
+            a=i;
+            while(a!=1){
+                if(a%2==0){
+                    a/=2;
+                } else {
+                    a = 3*a+1;
+                }
+                count++;
+            }
+            if(count > steps){
+                steps = count;
+                number = i;
+            }
+        }
+        System.out.println(number + " - steps: " + steps);
+    }
+}
