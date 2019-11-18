@@ -1,0 +1,29 @@
+public class Main {
+
+    public static void main(String[] args) {
+        int result = 0;
+
+        for(int i = 100;i<1000;i++){
+            for(int j = 100; j<1000;j++){
+                int a = i*j;
+                int palindrome = 0;
+                int count = 0;
+                while(a>0){
+                    count++;
+                    a=a/10;
+                }
+                a = i*j;
+                for(int k = count-1;k>=0;k--){
+                    int rest = a%10;
+                    palindrome+=(rest*(Math.pow(10,k)));
+                    a=a/10;
+                }
+                a = i*j;
+                if(palindrome == a && palindrome > result) {
+                    result = palindrome;
+                }
+            }
+        }
+        System.out.println(result);
+    }
+}
