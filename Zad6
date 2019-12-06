@@ -8,26 +8,13 @@ public class Main {
 
     }
 
-    static int wektor(int n){
+    static int wektor(int[] a, int[]b){
 
-        int[]a = new int[n];
-        int[]b = new int[n];
+        int sum = 0;
 
-        Scanner skan = new Scanner(System.in);
-
-        System.out.println("1: ");
-        for(int i=0;i<n;i++){
-            a[i]=skan.nextInt();
+        for(int i=0; i<a.length;i++){
+            sum+=(a[i]*b[i]);
         }
-
-        System.out.println("2: ");
-        for(int i=0;i<n;i++){
-            b[i]=skan.nextInt();
-        }
-        int suma=0;
-        for(int i=0;i<n;i++){
-            suma+=(a[i]*b[i]);
-        }
-        return suma;
+        return sum;
     }
 }
