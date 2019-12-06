@@ -1,0 +1,27 @@
+//Zaimplementuj w postaci procedury mnożenie 2 macierzy o wymiarze NxN
+//Zrealizuj powyższy punkt przy założeniu, że macierze nie są kwadratowe (*)
+
+
+class Main {
+
+    public static void main(String[] args) {
+
+    }
+
+    static int[][] matrix(int[][]a,int[][]b){
+
+        int temp = 0;
+        int[][]c = new int[a.length][a.length];
+
+        for(int i=0;i<a.length;i++){
+            for(int j=0;j<a.length;j++) {
+                for(int k=0;k<b.length;k++){
+                    temp+=a[i][k] * b[k][j];
+                }
+                c[i][j] = temp;
+                temp = 0;
+            }
+        }
+        return c;
+    }
+}
